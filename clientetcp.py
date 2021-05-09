@@ -17,5 +17,3 @@ def main():
     try:
         conec.connect((HostAlvo, int(PortaAlvo)))
         print("Conexão TCP realizada com sucesso, Hoste Alvo")
-
-
