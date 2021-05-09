@@ -16,4 +16,12 @@ def main():
     
     try:
         conec.connect((HostAlvo, int(PortaAlvo)))
-        print("Conexão TCP realizada com sucesso, Hoste Alvo")
+        print("Conexão TCP realizada com sucesso no host: " + HostAlvo + " Utilizando a porta: " + PortaAlvo)
+        conec.shutdown(2)
+    except socket.error as erro:
+        print("Não foi possivel conectar no host: " + HostAlvo + "Porta: " + PortaAlvo)
+        print("Erro: {}".format(erro))
+        sys.exit()
+
+if __name__ == "__main__":
+    main()
