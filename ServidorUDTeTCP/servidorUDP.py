@@ -14,5 +14,5 @@ while 1:
 
     if dados:
         print('Servidor enviando mensagem: ')
-        conecServe.sendto(dados + (mensagem.ecode()), ender)
+        conecServe.sendto(dados + (mensagem.encode()), ender)
 
